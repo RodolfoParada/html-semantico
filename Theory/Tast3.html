@@ -1,0 +1,94 @@
+// Task 3: Formularios HTML con Validación (8 minutos)
+// Los formularios permiten la interacción del usuario, recolectando datos que se envían al servidor.
+
+// Estructura Básica de Formulario
+<form action="/procesar" method="POST">
+  <fieldset>
+    <legend>Información Personal</legend>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" min="18" max="120">
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Preferencias</legend>
+
+    <label>
+      <input type="checkbox" name="newsletter" value="si">
+      Suscribirse al newsletter
+    </label>
+
+    <label>Género:</label>
+    <select name="genero">
+      <option value="">Seleccionar...</option>
+      <option value="masculino">Masculino</option>
+      <option value="femenino">Femenino</option>
+      <option value="otro">Otro</option>
+    </select>
+
+  </fieldset>
+
+  <button type="submit">Enviar</button>
+  <button type="reset">Limpiar</button>
+</form>
+
+
+//Tipos de Input Avanzados
+<!-- Texto y contraseñas -->
+<input type="text" placeholder="Nombre completo">
+<input type="password" placeholder="Contraseña">
+
+<!-- Números y rangos -->
+<input type="number" min="0" max="100" step="5">
+<input type="range" min="0" max="100">
+
+<!-- Fechas y horas -->
+<input type="date">
+<input type="time">
+<input type="datetime-local">
+
+<!-- Archivos -->
+<input type="file" accept="image/*">
+
+<!-- Color -->
+<input type="color">
+
+<!-- URL y teléfono -->
+<input type="url" placeholder="https://ejemplo.com">
+<input type="tel" placeholder="+34 600 000 000">
+
+<!-- Búsqueda -->
+<input type="search" placeholder="Buscar...">
+
+//Validación HTML5
+<form>
+  <input type="text" required minlength="3" maxlength="50">
+  <input type="email" required>
+  <input type="password" required pattern=".{8,}">
+  <input type="number" min="18" max="99">
+
+  <!-- Mensajes de validación personalizados -->
+  <input type="text" required
+         title="Este campo es obligatorio">
+
+  <button type="submit">Enviar</button>
+</form>
+
+/*
+Atributos de Formulario Importantes
+required: Campo obligatorio
+minlength/maxlength: Longitud mínima/máxima
+min/max: Valores mínimo/máximo
+pattern: Expresión regular para validación
+placeholder: Texto de ayuda
+autocomplete: Sugerencias del navegador
+disabled: Campo deshabilitado
+readonly: Campo de solo lectura
+*/
