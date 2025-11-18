@@ -1,0 +1,41 @@
+//Task 4: Navegación y Enlaces (4 minutos)
+//La navegación permite a los usuarios moverse entre diferentes partes del sitio web.
+
+//Tipos de Enlaces
+
+<!-- Enlaces absolutos -->
+<a href="https://www.google.com">Google</a>
+
+<!-- Enlaces relativos -->
+<a href="acerca.html">Acerca de</a>
+<a href="productos/categoria.html">Categoría</a>
+<a href="../index.html">Volver</a>
+
+<!-- Enlaces internos (anchor links) -->
+<a href="#seccion1">Ir a Sección 1</a>
+
+<section id="seccion1">
+  <h2>Sección 1</h2>
+  <p>Contenido de la sección...</p>
+</section>
+
+//Navegación Moderna
+
+<nav>
+  <ul>
+    <li><a href="#home" aria-current="page">Inicio</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- Navegación con accesibilidad -->
+<nav aria-label="Navegación principal">
+  <ul role="menubar">
+    <li role="menuitem">
+      <a href="#home">Inicio</a>
+    </li>
+    <!-- más elementos -->
+  </ul>
+</nav>
