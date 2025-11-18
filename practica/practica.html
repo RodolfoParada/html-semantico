@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio - Desarrollador Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    nav {
+      background: #34495e;
+      padding: 1rem;
+    }
+    
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    
+    nav a:hover {
+      background: #3498db;
+    }
+    
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    .hero {
+      text-align: center;
+      background: #ecf0f1;
+      padding: 3rem;
+      border-radius: 8px;
+    }
+    
+    .proyectos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .proyecto {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+    
+    label {
+      font-weight: bold;
+    }
+    
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    button {
+      background: #3498db;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    
+    button:hover {
+      background: #2980b9;
+    }
+    
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Juan Pérez</h1>
+    <p>Desarrollador Web Fullstack</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre Mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="inicio" class="hero">
+      <h2>Bienvenido a Mi Portafolio</h2>
+      <p>Creo aplicaciones web modernas y funcionales con las últimas tecnologías.</p>
+      <a href="#contacto"><button>Contáctame</button></a>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>Sobre Mí</h2>
+      <article>
+        <p>Soy un desarrollador web apasionado con experiencia en JavaScript, React y Node.js. 
+        Me especializo en crear experiencias de usuario excepcionales y código mantenible.</p>
+        
+        <h3>Habilidades</h3>
+        <ul>
+          <li>HTML5, CSS3, JavaScript ES6+</li>
+          <li>React, Node.js, Express</li>
+          <li>SQL, MongoDB</li>
+          <li>Git, GitHub, CI/CD</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="proyectos">
+      <h2>Mis Proyectos</h2>
+      <div class="proyectos">
+        <article class="proyecto">
+          <h3>E-commerce App</h3>
+          <p>Aplicación de comercio electrónico completa con carrito de compras y pagos.</p>
+          <p><strong>Tecnologías:</strong> React, Node.js, PostgreSQL</p>
+        </article>
+        
+        <article class="proyecto">
+          <h3>Task Manager</h3>
+          <p>Gestor de tareas colaborativo con tiempo real usando WebSockets.</p>
+          <p><strong>Tecnologías:</strong> Vue.js, Socket.io, MongoDB</p>
+        </article>
+        
+        <article class="proyecto">
+          <h3>Weather Dashboard</h3>
+          <p>Dashboard meteorológico con datos en tiempo real y pronósticos.</p>
+          <p><strong>Tecnologías:</strong> JavaScript, API REST, Chart.js</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form action="/contacto" method="POST">
+        <fieldset>
+          <legend>Envíame un Mensaje</legend>
+          
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required minlength="2">
+          
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono">
+          
+          <label for="asunto">Asunto:</label>
+          <select id="asunto" name="asunto" required>
+            <option value="">Seleccionar...</option>
+            <option value="proyecto">Consulta sobre proyecto</option>
+            <option value="colaboracion">Propuesta de colaboración</option>
+            <option value="empleo">Oportunidad laboral</option>
+            <option value="otro">Otro</option>
+          </select>
+          
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required minlength="10"></textarea>
+          
+          <label>
+            <input type="checkbox" name="newsletter" value="si">
+            Suscribirme al newsletter
+          </label>
+          
+        </fieldset>
+        
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Juan Pérez. Todos los derechos reservados.</p>
+    <p>
+      <a href="https://github.com/juanperez" target="_blank">GitHub</a> | 
+      <a href="https://linkedin.com/in/juanperez" target="_blank">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+</html>
