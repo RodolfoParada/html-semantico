@@ -1,0 +1,200 @@
+/* ------------------------------
+   ESTILOS GENERALES
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f4f6fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #394476;
+}
+
+a {
+  text-decoration: none;
+  color: #394476;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #95AEE9;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* ------------------------------
+   NAV
+------------------------------ */
+nav {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 1rem;
+}
+
+nav a {
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #1b2340;
+}
+
+/* ------------------------------
+   HERO / INICIO
+------------------------------ */
+.hero {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero button {
+  background: #394476;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.hero button:hover {
+  background: #2a325c;
+}
+
+/* ------------------------------
+   SECCIONES GENERALES
+------------------------------ */
+main section {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------------------
+   SOBRE MÍ
+------------------------------ */
+#sobre-mi ul {
+  padding-left: 1.2rem;
+}
+
+#sobre-mi li {
+  margin-bottom: 0.5rem;
+}
+
+/* ------------------------------
+   PROYECTOS
+------------------------------ */
+.proyectos {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.proyecto {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.proyecto h3 {
+  margin-bottom: 0.7rem;
+}
+
+/* Diseño responsive: 3 → 2 → 1 columnas */
+@media (min-width: 768px) {
+  .proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .proyectos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ------------------------------
+   FORMULARIO DE CONTACTO
+------------------------------ */
+form fieldset {
+  border: none;
+  padding: 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  background: #394476;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #2a325c;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  background: #eceef5;
+}
+
+footer a {
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #1b2340;
+}
