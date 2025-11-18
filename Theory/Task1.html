@@ -1,0 +1,45 @@
+//Task 1: ¿Por qué HTML Semántico? (8 minutos)
+//El HTML semántico usa elementos que describen claramente su significado y propósito, mejorando accesibilidad, SEO y mantenibilidad del código.
+
+//Problemas del HTML no Semántico
+<!-- ❌ HTML no semántico (difícil de entender y mantener) -->
+<div id="header">
+  <div class="nav">
+    <div class="nav-item">Inicio</div>
+    <div class="nav-item">Acerca</div>
+    <div class="nav-item">Contacto</div>
+  </div>
+</div>
+
+<div id="main">
+  <div class="article">
+    <div class="title">Título del Artículo</div>
+    <div class="content">Contenido del artículo...</div>
+  </div>
+</div>
+
+// Ventajas del HTML Semántico
+<!-- ✅ HTML semántico (claro y significativo) -->
+<header>
+  <nav>
+    <a href="#home">Inicio</a>
+    <a href="#about">Acerca</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <h1>Título del Artículo</h1>
+    <p>Contenido del artículo...</p>
+  </article>
+</main>
+
+/*
+Beneficios del HTML semántico:
+
+Accesibilidad: Los lectores de pantalla pueden navegar mejor
+SEO: Los motores de búsqueda entienden mejor el contenido
+Mantenibilidad: Código más claro y fácil de mantener
+Performance: Mejor procesamiento por browsers y herramientas
+*/
